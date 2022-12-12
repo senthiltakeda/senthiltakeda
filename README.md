@@ -16,3 +16,5 @@ Apply complete! Resources: 4 added, 2 changed, 0 destroyed.
 Outputs:
 
 corp_de_gia_interactive_cluster = "1205-153003-qah9ivyd"
+
+
