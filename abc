@@ -1,1 +1,319 @@
-aaaaaaaa
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-AppAdmin will be created
+  + resource "databricks_entitlements" "Okta-DBX-E2-GDT-IT4IT-AppAdmin" {
+      + allow_cluster_create       = false
+      + allow_instance_pool_create = false
+      + databricks_sql_access      = true
+      + group_id                   = "496223271883918"
+      + id                         = (known after apply)
+      + workspace_access           = false
+    }
+
+  # databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataAnalyst will be created
+  + resource "databricks_entitlements" "Okta-DBX-E2-GDT-IT4IT-DataAnalyst" {
+      + allow_cluster_create       = false
+      + allow_instance_pool_create = false
+      + databricks_sql_access      = true
+      + group_id                   = "759609741738951"
+      + id                         = (known after apply)
+      + workspace_access           = false
+    }
+
+  # databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataEngineer will be created
+  + resource "databricks_entitlements" "Okta-DBX-E2-GDT-IT4IT-DataEngineer" {
+      + allow_cluster_create       = false
+      + allow_instance_pool_create = false
+      + databricks_sql_access      = true
+      + group_id                   = "778363949701814"
+      + id                         = (known after apply)
+      + workspace_access           = false
+    }
+
+  # databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataScientist will be created
+  + resource "databricks_entitlements" "Okta-DBX-E2-GDT-IT4IT-DataScientist" {
+      + allow_cluster_create       = false
+      + allow_instance_pool_create = false
+      + databricks_sql_access      = true
+      + group_id                   = "178789656682253"
+      + id                         = (known after apply)
+      + workspace_access           = false
+    }
+
+  # databricks_instance_profile.de-corp-smartmonitoring will be created
+  + resource "databricks_instance_profile" "de-corp-smartmonitoring" {
+      + id                   = (known after apply)
+      + instance_profile_arn = "arn:aws:iam::671616840389:instance-profile/TEC-EC2-DATABRICKS-USTST-DE-GDT-IT4IT-ROLE"
+      + skip_validation      = (known after apply)
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 496223271883918
+      + workspace_id = 1058862015284785
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataAnalyst_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-GDT-IT4IT-DataAnalyst_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 759609741738951
+      + workspace_id = 1058862015284785
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 778363949701814
+      + workspace_id = 1058862015284785
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 178789656682253
+      + workspace_id = 1058862015284785
+    }
+
+  # null_resource.previous will be created
+  + resource "null_resource" "previous" {
+      + id = (known after apply)
+    }
+
+  # time_sleep.wait_2_minutes will be created
+  + resource "time_sleep" "wait_2_minutes" {
+      + create_duration = "2m"
+      + id              = (known after apply)
+    }
+
+  # module.de-corp-smartmonitoring-sql_endpoint.databricks_permissions.template will be created
+  + resource "databricks_permissions" "template" {
+      + id              = (known after apply)
+      + object_type     = (known after apply)
+      + sql_endpoint_id = (known after apply)
+
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-AppAdmin"
+          + permission_level = "CAN_USE"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataAnalyst"
+          + permission_level = "CAN_USE"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataEngineer"
+          + permission_level = "CAN_USE"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataScientist"
+          + permission_level = "CAN_USE"
+        }
+    }
+
+  # module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template will be created
+  + resource "databricks_sql_endpoint" "template" {
+      + auto_stop_mins            = 120
+      + cluster_size              = "Small"
+      + data_source_id            = (known after apply)
+      + enable_photon             = true
+      + enable_serverless_compute = false
+      + id                        = (known after apply)
+      + jdbc_url                  = (known after apply)
+      + max_num_clusters          = 1
+      + min_num_clusters          = 1
+      + name                      = "GDT-IT4IT-SQL"
+      + num_clusters              = 1
+      + spot_instance_policy      = "COST_OPTIMIZED"
+      + state                     = (known after apply)
+
+      + odbc_params {
+          + host     = (known after apply)
+          + hostname = (known after apply)
+          + path     = (known after apply)
+          + port     = (known after apply)
+          + protocol = (known after apply)
+        }
+
+      + tags {
+          + custom_tags {
+              + key   = "project-id"
+              + value = "APMS-92799"
+            }
+          + custom_tags {
+              + key   = "account-type"
+              + value = "production"
+            }
+          + custom_tags {
+              + key   = "Team"
+              + value = "admins"
+            }
+          + custom_tags {
+              + key   = "apms-id"
+              + value = "APMS-91706"
+            }
+          + custom_tags {
+              + key   = "application-name"
+              + value = "databricks"
+            }
+          + custom_tags {
+              + key   = "app"
+              + value = "NONE"
+            }
+          + custom_tags {
+              + key   = "it-business-owner"
+              + value = "dl.It_Databricks_Admins@takeda.com"
+            }
+          + custom_tags {
+              + key   = "business-criticality"
+              + value = "high"
+            }
+          + custom_tags {
+              + key   = "business-unit-n1"
+              + value = "ITFIT"
+            }
+          + custom_tags {
+              + key   = "business-unit-n2"
+              + value = "CTO Enterprise Architecture"
+            }
+          + custom_tags {
+              + key   = "environment-id"
+              + value = "Test"
+            }
+          + custom_tags {
+              + key   = "application-owner"
+              + value = "mario.tillmann@takeda.com"
+            }
+          + custom_tags {
+              + key   = "it-technical-owner"
+              + value = "dl.Ted-Platform-Team@Takeda.com"
+            }
+          + custom_tags {
+              + key   = "data-classification"
+              + value = "confidential"
+            }
+        }
+    }
+
+  # module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_global_config.template will be created
+  + resource "databricks_sql_global_config" "template" {
+      + data_access_config        = {
+          + "spark.databricks.hive.metastore.glueCatalog.enabled" = "true"
+          + "spark.hadoop.aws.glue.cache.db.enable"               = "true"
+          + "spark.hadoop.aws.glue.cache.db.size"                 = "1000"
+          + "spark.hadoop.aws.glue.cache.db.ttl-mins"             = "30"
+          + "spark.hadoop.aws.glue.cache.table.enable"            = "true"
+          + "spark.hadoop.aws.glue.cache.table.size"              = "1000"
+          + "spark.hadoop.aws.glue.cache.table.ttl-mins"          = "30"
+          + "spark.hadoop.hive.metastore.glue.catalogid"          = "263789222982"
+        }
+      + enable_serverless_compute = false
+      + id                        = (known after apply)
+      + instance_profile_arn      = "arn:aws:iam::671616840389:instance-profile/TEC-EC2-DATABRICKS-USTST-DE-GDT-IT4IT-ROLE"
+      + security_policy           = "DATA_ACCESS_CONTROL"
+      + sql_config_params         = {
+          + "ANSI_MODE" = "true"
+        }
+    }
+
+  # module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template will be created
+  + resource "databricks_cluster" "template" {
+      + autotermination_minutes      = 120
+      + cluster_id                   = (known after apply)
+      + cluster_name                 = "DE-GDT-IT4IT"
+      + custom_tags                  = {
+          + "ResourceClass"        = "Classic"
+          + "Team"                 = "databricks"
+          + "account-type"         = "Test"
+          + "app"                  = "IT4IT"
+          + "application-owner"    = "mario.tillmann@takeda.com"
+          + "business-criticality" = "High"
+          + "business-unit-n1"     = "ITFIT"
+          + "business-unit-n2"     = "CTO Enterprise Architecture"
+          + "data-classification"  = "high"
+          + "environment-id"       = "Test"
+          + "it-business-owner"    = "dl.It_Databricks_Admins@takeda.com"
+          + "project-id"           = "APMS-92799"
+        }
+      + default_tags                 = (known after apply)
+      + driver_instance_pool_id      = (known after apply)
+      + driver_node_type_id          = "m5.xlarge"
+      + enable_elastic_disk          = (known after apply)
+      + enable_local_disk_encryption = (known after apply)
+      + id                           = (known after apply)
+      + node_type_id                 = "m5.xlarge"
+      + num_workers                  = 0
+      + policy_id                    = "9C6308F7030001C9"
+      + spark_conf                   = {
+          + "spark.databricks.acl.dfAclsEnabled"                  = "false"
+          + "spark.databricks.hive.metastore.glueCatalog.enabled" = "true"
+          + "spark.databricks.repl.allowedLanguages"              = "python,sql"
+          + "spark.hadoop.aws.glue.cache.db.enable"               = "true"
+          + "spark.hadoop.aws.glue.cache.db.size"                 = "1000"
+          + "spark.hadoop.aws.glue.cache.db.ttl-mins"             = "30"
+          + "spark.hadoop.aws.glue.cache.table.enable"            = "true"
+          + "spark.hadoop.aws.glue.cache.table.size"              = "1000"
+          + "spark.hadoop.aws.glue.cache.table.ttl-mins"          = "30"
+          + "spark.hadoop.fs.s3a.acl.default"                     = "BucketOwnerFullControl"
+          + "spark.hadoop.hive.metastore.glue.catalogid"          = "881018545998"
+        }
+      + spark_version                = "8.3.x-scala2.12"
+      + state                        = (known after apply)
+      + url                          = (known after apply)
+
+      + autoscale {
+          + max_workers = 8
+          + min_workers = 1
+        }
+
+      + aws_attributes {
+          + availability           = "SPOT_WITH_FALLBACK"
+          + first_on_demand        = 2
+          + instance_profile_arn   = "arn:aws:iam::671616840389:instance-profile/TEC-EC2-DATABRICKS-USTST-DE-GDT-IT4IT-ROLE"
+          + spot_bid_price_percent = 100
+          + zone_id                = "auto"
+        }
+    }
+
+  # module.de-corp-smartmonitoring_interactive_cluster.databricks_permissions.template will be created
+  + resource "databricks_permissions" "template" {
+      + cluster_id  = (known after apply)
+      + id          = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-AppAdmin"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataAnalyst"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataEngineer"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-GDT-IT4IT-DataScientist"
+          + permission_level = "CAN_RESTART"
+        }
+    }
+
+Plan: 16 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + de-corp-smartmonitoring_interactive_cluster = (known after apply)
