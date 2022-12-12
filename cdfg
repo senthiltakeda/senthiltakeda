@@ -1,87 +1,104 @@
 null_resource.previous: Creating...
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_global_config.template: Creating...
-null_resource.previous: Creation complete after 0s [id=7638489329512162464]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group: Creating...
-time_sleep.wait_2_minutes: Creating...
 databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataAnalyst_group: Creating...
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Creating...
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group: Creating...
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group: Creating...
 databricks_instance_profile.cluster: Creating...
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_global_config.template: Creation complete after 1s [id=global]
-databricks_instance_profile.cluster: Creation complete after 2s [id=arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DE-GDT-IT4IT-ROLE]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group: Creation complete after 3s [id=2186391591496286|178789656682253]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group: Creation complete after 3s [id=2186391591496286|778363949701814]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataAnalyst_group: Creation complete after 3s [id=2186391591496286|759609741738951]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group: Creation complete after 3s [id=2186391591496286|496223271883918]
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group: Creating...
+null_resource.previous: Creation complete after 0s [id=3449639008853633919]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_global_config.template: Creating...
+time_sleep.wait_2_minutes: Creating...
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Creating...
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_global_config.template: Creation complete after 2s [id=global]
+databricks_instance_profile.cluster: Creation complete after 2s [id=arn:aws:iam::103291568368:instance-profile/TEC-EC2-DATABRICKS-USDEV-DE-GDT-IT4IT-ROLE]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Creating...
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataScientist_group: Creation complete after 4s [id=631113751561990|178789656682253]
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-AppAdmin_group: Creation complete after 4s [id=631113751561990|496223271883918]
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataAnalyst_group: Creation complete after 4s [id=631113751561990|759609741738951]
+databricks_mws_permission_assignment.add_Okta-DBX-E2-GDT-IT4IT-DataEngineer_group: Creation complete after 4s [id=631113751561990|778363949701814]
 time_sleep.wait_2_minutes: Still creating... [10s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [10s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [10s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [10s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [10s elapsed]
 time_sleep.wait_2_minutes: Still creating... [20s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [20s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [20s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [20s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [20s elapsed]
 time_sleep.wait_2_minutes: Still creating... [30s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [30s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [30s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [30s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [30s elapsed]
 time_sleep.wait_2_minutes: Still creating... [40s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [40s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [40s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [40s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [40s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [50s elapsed]
 time_sleep.wait_2_minutes: Still creating... [50s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [50s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [50s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [50s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m0s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m0s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m0s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m0s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m0s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m10s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m10s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m10s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m10s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m10s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m20s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m20s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m20s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m20s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m20s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m30s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m30s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m30s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m30s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m30s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m40s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m40s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m40s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m40s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m40s elapsed]
 time_sleep.wait_2_minutes: Still creating... [1m50s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m50s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m50s elapsed]
-time_sleep.wait_2_minutes: Still creating... [2m0s elapsed]
-time_sleep.wait_2_minutes: Creation complete after 2m0s [id=2022-12-01T10:39:48Z]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m0s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [1m50s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [1m50s elapsed]
+time_sleep.wait_2_minutes: Creation complete after 2m0s [id=2022-12-01T10:56:59Z]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m0s elapsed]
 databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataAnalyst: Creating...
-databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataEngineer: Creating...
-databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-AppAdmin: Creating...
 databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataScientist: Creating...
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m0s elapsed]
+databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-AppAdmin: Creating...
+databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataEngineer: Creating...
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m0s elapsed]
 databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataAnalyst: Creation complete after 4s [id=group/759609741738951]
-databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataEngineer: Creation complete after 4s [id=group/778363949701814]
 databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-AppAdmin: Creation complete after 4s [id=group/496223271883918]
+databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataEngineer: Creation complete after 4s [id=group/778363949701814]
 databricks_entitlements.Okta-DBX-E2-GDT-IT4IT-DataScientist: Creation complete after 5s [id=group/178789656682253]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m10s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m10s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m20s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m20s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m30s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m30s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m40s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m40s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m50s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m50s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m0s elapsed]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_cluster.template: Creation complete after 2m59s [id=1201-103750-klwd3npr]
-module.corp-de-smartmonitoring_interactive_cluster.databricks_permissions.template: Creating...
-module.corp-de-smartmonitoring_interactive_cluster.databricks_permissions.template: Creation complete after 5s [id=/clusters/1201-103750-klwd3npr]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m10s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m20s elapsed]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Creation complete after 3m29s [id=d22fd5c4fdd62579]
-module.corp-de-smartmonitoring-sql_endpoint.databricks_permissions.template: Creating...
-module.corp-de-smartmonitoring-sql_endpoint.databricks_permissions.template: Creation complete after 4s [id=/sql/warehouses/d22fd5c4fdd62579]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m10s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m10s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m20s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m20s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m30s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m30s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m40s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m40s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [2m50s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Still creating... [2m50s elapsed]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_cluster.template: Creation complete after 2m57s [id=1201-105501-c0awz3fz]
+databricks_job.lake_to_hub_test_253135: Creating...
+databricks_job.lake_to_hub_245628: Creating...
+databricks_job.raw_to_lake_244997: Creating...
+databricks_job.hub_to_mart_test_256602: Creating...
+databricks_job.lake_to_hub_245628: Creation complete after 1s [id=861719155659106]
+databricks_job.lake_to_hub_test_253135: Creation complete after 1s [id=180014803446810]
+module.de-corp-smartmonitoring_interactive_cluster.databricks_permissions.template: Creating...
+databricks_job.hub_to_mart_test_256602: Creation complete after 1s [id=877261040804140]
+databricks_job.raw_to_lake_244997: Creation complete after 1s [id=1102178913977749]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m0s elapsed]
+databricks_permissions.job_lake_to_hub_test_253135: Creating...
+databricks_permissions.job_lake_to_hub_245628: Creating...
+databricks_permissions.job_raw_to_lake_244997: Creating...
+databricks_permissions.job_hub_to_mart_test_256602: Creating...
+module.de-corp-smartmonitoring_interactive_cluster.databricks_permissions.template: Creation complete after 5s [id=/clusters/1201-105501-c0awz3fz]
+databricks_permissions.job_lake_to_hub_test_253135: Creation complete after 4s [id=/jobs/180014803446810]
+databricks_permissions.job_raw_to_lake_244997: Creation complete after 4s [id=/jobs/1102178913977749]
+databricks_permissions.job_hub_to_mart_test_256602: Creation complete after 4s [id=/jobs/877261040804140]
+databricks_permissions.job_lake_to_hub_245628: Creation complete after 4s [id=/jobs/861719155659106]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m10s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m21s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m31s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m41s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [3m51s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [4m1s elapsed]
+module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template: Still creating... [4m11s elapsed]
 
-Apply complete! Resources: 16 added, 0 changed, 0 destroyed.
+Error: cannot read sql endpoint: Get "https://onetakeda-usdev.cloud.databricks.com/api/2.0/preview/sql/data_sources": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
 
-Outputs:
-
-corp-de-smartmonitoring_interactive_cluster = "1201-103750-klwd3npr"
+  with module.de-corp-smartmonitoring-sql_endpoint.databricks_sql_endpoint.template,
+  on ../../../modules/sql/sql.tf line 27, in resource "databricks_sql_endpoint" "template":
+  27: resource "databricks_sql_endpoint" "template" {
