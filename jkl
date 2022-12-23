@@ -1,1 +1,468 @@
 
+data.terraform_remote_state.stack: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataScientist: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-AppAdmin: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataEngineer: Reading...
+data.terraform_remote_state.stack: Read complete after 0s
+module.pdt_biolife_interactive_cluster.data.databricks_spark_version.template: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-AppAdmin: Read complete after 0s [id=125229283327240]
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataEngineer: Read complete after 0s [id=928935842866304]
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataScientist: Read complete after 0s [id=483288032256506]
+data.databricks_group.Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst: Read complete after 0s [id=624861900494721]
+module.pdt_biolife_interactive_cluster.data.databricks_spark_version.template: Read complete after 1s [id=12.0.x-cpu-ml-scala2.12]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # databricks_instance_profile.cluster will be created
+  + resource "databricks_instance_profile" "cluster" {
+      + id                   = (known after apply)
+      + instance_profile_arn = "arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DS-PDT-BIOLIFE-ROLE"
+      + skip_validation      = (known after apply)
+    }
+
+  # databricks_job.biolife_88080855 will be created
+  + resource "databricks_job" "biolife_88080855" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "BioLife"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "chris.foote@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "5 0 5 * * ?"
+          + timezone_id            = "America/Los_Angeles"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "BioLife"
+
+          + notebook_task {
+              + notebook_path = "/Users/chris.foote@takeda.com/BioLife"
+            }
+        }
+    }
+
+  # databricks_job.mss_insights_1_64680270 will be created
+  + resource "databricks_job" "mss_insights_1_64680270" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "MSS Insights (1)"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "robbie.morrison@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "39 21 13 * * ?"
+          + timezone_id            = "America/Denver"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "MSS_Insights_1"
+
+          + notebook_task {
+              + notebook_path = "/Users/robbie.morrison@takeda.com/MSS Insights (1)"
+            }
+        }
+    }
+
+  # databricks_job.new_center_ramp_62440441 will be created
+  + resource "databricks_job" "new_center_ramp_62440441" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "New Center Ramp"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "max.miller@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "13 45 6 * * ?"
+          + timezone_id            = "America/New_York"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "New_Center_Ramp"
+
+          + notebook_task {
+              + notebook_path = "/Users/max.miller@takeda.com/New Center Ramp"
+            }
+        }
+    }
+
+  # databricks_job.wco_daily_productivity_65122817 will be created
+  + resource "databricks_job" "wco_daily_productivity_65122817" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "wco_daily_productivity"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "mitch.delvo@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "46 5 8 ? * Mon"
+          + timezone_id            = "America/Chicago"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "wco_daily_productivity"
+
+          + notebook_task {
+              + notebook_path = "/Users/mitch.delvo@takeda.com/wco_daily_productivity"
+            }
+        }
+    }
+
+  # databricks_job.wco_labor_insights_103572593 will be created
+  + resource "databricks_job" "wco_labor_insights_103572593" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "wco_labor_insights"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "mitch.delvo@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "37 45 7 ? * Mon"
+          + timezone_id            = "America/Chicago"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "wco_labor_insights"
+
+          + notebook_task {
+              + notebook_path = "/PDT/IT-DataScience/13_Workforce_Optimization/Jobs/wco_labor_insights"
+            }
+        }
+    }
+
+  # databricks_job.wfm_awards_upload_90134032 will be created
+  + resource "databricks_job" "wfm_awards_upload_90134032" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "WFM Awards upload"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "mitch.delvo@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "33 15 8 ? * Mon"
+          + timezone_id            = "America/Chicago"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "WFM_Awards_upload"
+
+          + notebook_task {
+              + notebook_path = "/PDT/IT-DataScience/13_Workforce_Optimization/Jobs/WFM Awards upload"
+            }
+        }
+    }
+
+  # databricks_job.wfm_awards_upload_to_monthly_99166174 will be created
+  + resource "databricks_job" "wfm_awards_upload_to_monthly_99166174" {
+      + always_running      = false
+      + format              = (known after apply)
+      + id                  = (known after apply)
+      + max_concurrent_runs = 1
+      + name                = "WFM Awards upload To Monthly"
+      + url                 = (known after apply)
+
+      + email_notifications {
+          + no_alert_for_skipped_runs = true
+          + on_failure                = [
+              + "mitch.delvo@takeda.com",
+            ]
+        }
+
+      + schedule {
+          + pause_status           = "PAUSED"
+          + quartz_cron_expression = "29 6 8 ? * Mon"
+          + timezone_id            = "America/Chicago"
+        }
+
+      + task {
+          + existing_cluster_id = (known after apply)
+          + retry_on_timeout    = (known after apply)
+          + task_key            = "WFM_Awards_upload_To_Monthly"
+
+          + notebook_task {
+              + notebook_path = "/PDT/IT-DataScience/13_Workforce_Optimization/Mitch/WFM Awards upload To Monthly"
+            }
+        }
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-AppAdmin_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-BIOLIFE-AppAdmin_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 125229283327240
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 624861900494721
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataEngineer_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-BIOLIFE-DataEngineer_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 928935842866304
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataScientist_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-BIOLIFE-DataScientist_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 483288032256506
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_permissions.job_biolife_88080855 will be created
+  + resource "databricks_permissions" "job_biolife_88080855" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "chris.foote@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_mss_insights_1_64680270 will be created
+  + resource "databricks_permissions" "job_mss_insights_1_64680270" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "robbie.morrison@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_new_center_ramp_62440441 will be created
+  + resource "databricks_permissions" "job_new_center_ramp_62440441" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "max.miller@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_wco_daily_productivity_65122817 will be created
+  + resource "databricks_permissions" "job_wco_daily_productivity_65122817" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "mitch.delvo@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_wco_labor_insights_103572593 will be created
+  + resource "databricks_permissions" "job_wco_labor_insights_103572593" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "mitch.delvo@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_wfm_awards_upload_90134032 will be created
+  + resource "databricks_permissions" "job_wfm_awards_upload_90134032" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "mitch.delvo@takeda.com"
+        }
+    }
+
+  # databricks_permissions.job_wfm_awards_upload_to_monthly_99166174 will be created
+  + resource "databricks_permissions" "job_wfm_awards_upload_to_monthly_99166174" {
+      + id          = (known after apply)
+      + job_id      = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + permission_level = "IS_OWNER"
+          + user_name        = "mitch.delvo@takeda.com"
+        }
+    }
+
+  # module.pdt_biolife_interactive_cluster.databricks_cluster.template will be created
+  + resource "databricks_cluster" "template" {
+      + autotermination_minutes      = 120
+      + cluster_id                   = (known after apply)
+      + cluster_name                 = "DS-PDT-BIOLIFE"
+      + custom_tags                  = {
+          + "ResourceClass"        = "Classic"
+          + "Team"                 = "databricks"
+          + "account-type"         = "Production"
+          + "app"                  = "PDT - BioLife"
+          + "application-owner"    = "jeff.hoverson@takeda.com"
+          + "business-criticality" = "High"
+          + "business-unit-n1"     = "PDT IT"
+          + "business-unit-n2"     = "PDT IT-Strategy Operations"
+          + "data-classification"  = "high"
+          + "environment-id"       = "Production"
+          + "it-business-owner"    = "dl.It_Databricks_Admins@takeda.com"
+          + "project-id"           = "APMS-91714"
+        }
+      + default_tags                 = (known after apply)
+      + driver_instance_pool_id      = (known after apply)
+      + driver_node_type_id          = "i3.2xlarge"
+      + enable_elastic_disk          = (known after apply)
+      + enable_local_disk_encryption = (known after apply)
+      + id                           = (known after apply)
+      + node_type_id                 = "i3.2xlarge"
+      + num_workers                  = 0
+      + policy_id                    = "9C61EF4F96003479"
+      + spark_conf                   = {
+          + "spark.databricks.acl.dfAclsEnabled"                  = "false"
+          + "spark.databricks.hive.metastore.glueCatalog.enabled" = "true"
+          + "spark.databricks.repl.allowedLanguages"              = "python,sql"
+          + "spark.hadoop.aws.glue.cache.db.enable"               = "true"
+          + "spark.hadoop.aws.glue.cache.db.size"                 = "1000"
+          + "spark.hadoop.aws.glue.cache.db.ttl-mins"             = "30"
+          + "spark.hadoop.aws.glue.cache.table.enable"            = "true"
+          + "spark.hadoop.aws.glue.cache.table.size"              = "1000"
+          + "spark.hadoop.aws.glue.cache.table.ttl-mins"          = "30"
+          + "spark.hadoop.fs.s3a.acl.default"                     = "BucketOwnerFullControl"
+          + "spark.hadoop.hive.metastore.glue.catalogid"          = "432372222409"
+        }
+      + spark_version                = "12.0.x-cpu-ml-scala2.12"
+      + state                        = (known after apply)
+      + url                          = (known after apply)
+
+      + autoscale {
+          + max_workers = 8
+          + min_workers = 1
+        }
+
+      + aws_attributes {
+          + availability           = "SPOT_WITH_FALLBACK"
+          + first_on_demand        = 2
+          + instance_profile_arn   = "arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DS-PDT-BIOLIFE-ROLE"
+          + spot_bid_price_percent = 100
+          + zone_id                = "auto"
+        }
+    }
+
+  # module.pdt_biolife_interactive_cluster.databricks_permissions.template will be created
+  + resource "databricks_permissions" "template" {
+      + cluster_id  = (known after apply)
+      + id          = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + group_name       = "Okta-DBX-E2-PDT-BIOLIFE-AppAdmin"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-PDT-BIOLIFE-DataScientist"
+          + permission_level = "CAN_RESTART"
+        }
+    }
+
+Plan: 21 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + pdt_biolife_interactive_cluster = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: plan.json
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "plan.json"
