@@ -1,71 +1,152 @@
-databricks_instance_profile.cluster: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataEngineer_group: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataScientist_group: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-AppAdmin_group: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst_group: Creating...
-databricks_instance_profile.cluster: Creation complete after 1s [id=arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DS-PDT-BIOLIFE-ROLE]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Creating...
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataAnalyst_group: Creation complete after 3s [id=2186391591496286|624861900494721]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-AppAdmin_group: Creation complete after 3s [id=2186391591496286|125229283327240]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataScientist_group: Creation complete after 4s [id=2186391591496286|483288032256506]
-databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-BIOLIFE-DataEngineer_group: Creation complete after 4s [id=2186391591496286|928935842866304]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [10s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [20s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [30s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [40s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [50s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m0s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m10s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m20s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m30s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m40s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [1m50s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m0s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m10s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m20s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m30s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m40s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [2m50s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m0s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m10s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m20s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m30s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m40s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Still creating... [3m50s elapsed]
-module.pdt_biolife_interactive_cluster.databricks_cluster.template: Creation complete after 3m51s [id=1222-074028-ggwtqpzb]
-databricks_job.wfm_awards_upload_to_monthly_99166174: Creating...
-databricks_job.wco_labor_insights_103572593: Creating...
-databricks_job.new_center_ramp_62440441: Creating...
-databricks_job.wco_daily_productivity_65122817: Creating...
-databricks_job.wfm_awards_upload_90134032: Creating...
-databricks_job.mss_insights_1_64680270: Creating...
-databricks_job.biolife_88080855: Creating...
-databricks_job.wco_labor_insights_103572593: Creation complete after 1s [id=1026632200961056]
-module.pdt_biolife_interactive_cluster.databricks_permissions.template: Creating...
-databricks_job.wco_daily_productivity_65122817: Creation complete after 1s [id=14853609957407]
-databricks_job.biolife_88080855: Creation complete after 1s [id=156161221502127]
-databricks_job.new_center_ramp_62440441: Creation complete after 1s [id=271138918264858]
-databricks_job.wfm_awards_upload_to_monthly_99166174: Creation complete after 1s [id=135739133509439]
-databricks_job.wfm_awards_upload_90134032: Creation complete after 1s [id=166957066687350]
-databricks_permissions.job_wco_labor_insights_103572593: Creating...
-databricks_permissions.job_wco_daily_productivity_65122817: Creating...
-databricks_job.mss_insights_1_64680270: Creation complete after 2s [id=304723343656069]
-databricks_permissions.job_biolife_88080855: Creating...
-databricks_permissions.job_wfm_awards_upload_to_monthly_99166174: Creating...
-databricks_permissions.job_wfm_awards_upload_90134032: Creating...
-databricks_permissions.job_new_center_ramp_62440441: Creating...
-databricks_permissions.job_mss_insights_1_64680270: Creating...
-databricks_permissions.job_wco_labor_insights_103572593: Creation complete after 5s [id=/jobs/1026632200961056]
-module.pdt_biolife_interactive_cluster.databricks_permissions.template: Creation complete after 6s [id=/clusters/1222-074028-ggwtqpzb]
-databricks_permissions.job_wfm_awards_upload_to_monthly_99166174: Creation complete after 5s [id=/jobs/135739133509439]
-databricks_permissions.job_wco_daily_productivity_65122817: Creation complete after 5s [id=/jobs/14853609957407]
-databricks_permissions.job_biolife_88080855: Creation complete after 5s [id=/jobs/156161221502127]
-databricks_permissions.job_new_center_ramp_62440441: Creation complete after 5s [id=/jobs/271138918264858]
-databricks_permissions.job_wfm_awards_upload_90134032: Creation complete after 6s [id=/jobs/166957066687350]
-databricks_permissions.job_mss_insights_1_64680270: Creation complete after 6s [id=/jobs/304723343656069]
+data.terraform_remote_state.stack: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataAnalyst: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-AppAdmin: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataEngineer: Reading...
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataScientist: Reading...
+data.terraform_remote_state.stack: Read complete after 0s
+module.ds-pdt-forecast-dev_interactive_cluster.data.databricks_spark_version.template: Reading...
+module.ds-pdt-forecast-dev_interactive_cluster.data.databricks_spark_version.template: Read complete after 0s [id=12.0.x-cpu-ml-scala2.12]
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-AppAdmin: Read complete after 0s [id=564916208720719]
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataAnalyst: Read complete after 1s [id=759602545683727]
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataEngineer: Read complete after 1s [id=741847143863456]
+data.databricks_group.Okta-DBX-E2-PDT-FORECAST-DataScientist: Read complete after 1s [id=862835692861165]
 
-Apply complete! Resources: 21 added, 0 changed, 0 destroyed.
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
 
-Outputs:
+Terraform will perform the following actions:
 
-pdt_biolife_interactive_cluster = "1222-074028-ggwtqpzb"
+  # databricks_instance_profile.cluster will be created
+  + resource "databricks_instance_profile" "cluster" {
+      + id                   = (known after apply)
+      + instance_profile_arn = "arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DS-PDT-FORECAST-ROLE"
+      + skip_validation      = (known after apply)
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-FORECAST-AppAdmin_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-FORECAST-AppAdmin_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 564916208720719
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-FORECAST-DataAnalyst_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-FORECAST-DataAnalyst_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 759602545683727
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-FORECAST-DataEngineer_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-FORECAST-DataEngineer_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 741847143863456
+      + workspace_id = 2186391591496286
+    }
+
+  # databricks_mws_permission_assignment.add_Okta-DBX-E2-PDT-FORECAST-DataScientist_group will be created
+  + resource "databricks_mws_permission_assignment" "add_Okta-DBX-E2-PDT-FORECAST-DataScientist_group" {
+      + id           = (known after apply)
+      + permissions  = [
+          + "USER",
+        ]
+      + principal_id = 862835692861165
+      + workspace_id = 2186391591496286
+    }
+
+  # module.ds-pdt-forecast-dev_interactive_cluster.databricks_cluster.template will be created
+  + resource "databricks_cluster" "template" {
+      + autotermination_minutes      = 120
+      + cluster_id                   = (known after apply)
+      + cluster_name                 = "DS-PDT-FORECAST-DEV"
+      + custom_tags                  = {
+          + "ResourceClass"        = "Classic"
+          + "Team"                 = "databricks"
+          + "account-type"         = "Production"
+          + "app"                  = "Plasma Forecast Scenario Planning"
+          + "application-owner"    = "jeff.hoverson@takeda.com"
+          + "business-criticality" = "High"
+          + "business-unit-n1"     = "PDT IT"
+          + "business-unit-n2"     = "PDT IT-Donor Engagement"
+          + "data-classification"  = "high"
+          + "environment-id"       = "Production"
+          + "it-business-owner"    = "dl.It_Databricks_Admins@takeda.com"
+          + "project-id"           = "APMS-93453"
+        }
+      + default_tags                 = (known after apply)
+      + driver_instance_pool_id      = (known after apply)
+      + driver_node_type_id          = "i3.4xlarge"
+      + enable_elastic_disk          = (known after apply)
+      + enable_local_disk_encryption = (known after apply)
+      + id                           = (known after apply)
+      + node_type_id                 = "i3.4xlarge"
+      + num_workers                  = 0
+      + policy_id                    = "9C61EF4F9600347C"
+      + spark_conf                   = {
+          + "spark.databricks.acl.dfAclsEnabled"                  = "false"
+          + "spark.databricks.hive.metastore.glueCatalog.enabled" = "true"
+          + "spark.databricks.repl.allowedLanguages"              = "python,sql"
+          + "spark.hadoop.aws.glue.cache.db.enable"               = "true"
+          + "spark.hadoop.aws.glue.cache.db.size"                 = "1000"
+          + "spark.hadoop.aws.glue.cache.db.ttl-mins"             = "30"
+          + "spark.hadoop.aws.glue.cache.table.enable"            = "true"
+          + "spark.hadoop.aws.glue.cache.table.size"              = "1000"
+          + "spark.hadoop.aws.glue.cache.table.ttl-mins"          = "30"
+          + "spark.hadoop.fs.s3a.acl.default"                     = "BucketOwnerFullControl"
+          + "spark.hadoop.hive.metastore.glue.catalogid"          = "432372222409"
+        }
+      + spark_version                = "10.4.x-scala2.12"
+      + state                        = (known after apply)
+      + url                          = (known after apply)
+
+      + autoscale {
+          + max_workers = 12
+          + min_workers = 4
+        }
+
+      + aws_attributes {
+          + availability           = "SPOT_WITH_FALLBACK"
+          + first_on_demand        = 2
+          + instance_profile_arn   = "arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-USPRD-DS-PDT-FORECAST-ROLE"
+          + spot_bid_price_percent = 100
+          + zone_id                = "auto"
+        }
+    }
+
+  # module.ds-pdt-forecast-dev_interactive_cluster.databricks_permissions.template will be created
+  + resource "databricks_permissions" "template" {
+      + cluster_id  = (known after apply)
+      + id          = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + group_name       = "Okta-DBX-E2-PDT-FORECAST-AppAdmin"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-PDT-FORECAST-DataScientist"
+          + permission_level = "CAN_RESTART"
+        }
+    }
+
+Plan: 7 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + ds-pdt-forecast-dev_interactive_cluster = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: plan.json
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "plan.json"
