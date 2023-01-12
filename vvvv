@@ -1,0 +1,27 @@
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Modifying... [id=0110-142743-w40tjrzq]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 10s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 20s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 30s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 40s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 50s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Modifications complete after 1m0s [id=0110-142743-w40tjrzq]
+databricks_job.uk_notebook_79518: Creating...
+databricks_job.create_comm_crm_vws_27910: Creating...
+databricks_job.uk_notebook_test_79529: Creating...
+databricks_job.uk_notebook_79518: Creation complete after 1s [id=1046897193953033]
+databricks_job.uk_notebook_test_79529: Creation complete after 1s [id=686094514300767]
+databricks_job.create_comm_crm_vws_27910: Creation complete after 1s [id=1070899243858918]
+module.de-com-eucan-da_interactive_cluster.databricks_permissions.template: Modifying... [id=/clusters/0110-142743-w40tjrzq]
+databricks_permissions.job_uk_notebook_test_79529: Creating...
+databricks_permissions.job_create_comm_crm_vws_27910: Creating...
+databricks_permissions.job_uk_notebook_79518: Creating...
+module.de-com-eucan-da_interactive_cluster.databricks_permissions.template: Modifications complete after 6s [id=/clusters/0110-142743-w40tjrzq]
+databricks_permissions.job_uk_notebook_test_79529: Creation complete after 8s [id=/jobs/686094514300767]
+databricks_permissions.job_uk_notebook_79518: Creation complete after 8s [id=/jobs/1046897193953033]
+databricks_permissions.job_create_comm_crm_vws_27910: Creation complete after 8s [id=/jobs/1070899243858918]
+
+Apply complete! Resources: 6 added, 2 changed, 0 destroyed.
+
+Outputs:
+
+de-com-eucan-da_interactive_cluster = "0110-142743-w40tjrzq"
