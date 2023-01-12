@@ -1,178 +1,27 @@
-Terraform used the selected providers to generate the following execution
-plan. Resource actions are indicated with the following symbols:
-  + create
-  ~ update in-place
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Modifying... [id=0110-142743-w40tjrzq]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 10s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 20s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 30s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 40s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Still modifying... [id=0110-142743-w40tjrzq, 50s elapsed]
+module.de-com-eucan-da_interactive_cluster.databricks_cluster.template: Modifications complete after 1m0s [id=0110-142743-w40tjrzq]
+databricks_job.uk_notebook_79518: Creating...
+databricks_job.create_comm_crm_vws_27910: Creating...
+databricks_job.uk_notebook_test_79529: Creating...
+databricks_job.uk_notebook_79518: Creation complete after 1s [id=1046897193953033]
+databricks_job.uk_notebook_test_79529: Creation complete after 1s [id=686094514300767]
+databricks_job.create_comm_crm_vws_27910: Creation complete after 1s [id=1070899243858918]
+module.de-com-eucan-da_interactive_cluster.databricks_permissions.template: Modifying... [id=/clusters/0110-142743-w40tjrzq]
+databricks_permissions.job_uk_notebook_test_79529: Creating...
+databricks_permissions.job_create_comm_crm_vws_27910: Creating...
+databricks_permissions.job_uk_notebook_79518: Creating...
+module.de-com-eucan-da_interactive_cluster.databricks_permissions.template: Modifications complete after 6s [id=/clusters/0110-142743-w40tjrzq]
+databricks_permissions.job_uk_notebook_test_79529: Creation complete after 8s [id=/jobs/686094514300767]
+databricks_permissions.job_uk_notebook_79518: Creation complete after 8s [id=/jobs/1046897193953033]
+databricks_permissions.job_create_comm_crm_vws_27910: Creation complete after 8s [id=/jobs/1070899243858918]
 
-Terraform will perform the following actions:
+Apply complete! Resources: 6 added, 2 changed, 0 destroyed.
 
-  # databricks_job.create_comm_crm_vws_27910 will be created
-  + resource "databricks_job" "create_comm_crm_vws_27910" {
-      + always_running      = false
-      + format              = (known after apply)
-      + id                  = (known after apply)
-      + max_concurrent_runs = 1
-      + name                = "Create_COMM_CRM_VWs"
-      + url                 = (known after apply)
+Outputs:
 
-      + email_notifications {
-          + on_failure = [
-              + "awadhesh.yona@takeda.com",
-            ]
-        }
-
-      + schedule {
-          + pause_status           = "PAUSED"
-          + quartz_cron_expression = "0 0 17 * * ?"
-          + timezone_id            = "US/Eastern"
-        }
-
-      + task {
-          + existing_cluster_id = "0110-142743-w40tjrzq"
-          + retry_on_timeout    = (known after apply)
-          + task_key            = "Create_COMM_CRM_VWs"
-
-          + notebook_task {
-              + notebook_path = "/COMM/COMM_IT_GEM/CDP/Notebook_Master"
-            }
-        }
-    }
-
-  # databricks_job.uk_notebook_79518 will be created
-  + resource "databricks_job" "uk_notebook_79518" {
-      + always_running      = false
-      + format              = (known after apply)
-      + id                  = (known after apply)
-      + max_concurrent_runs = 1
-      + name                = "UK-NOTEBOOK"
-      + url                 = (known after apply)
-
-      + email_notifications {}
-
-      + task {
-          + existing_cluster_id = "0110-142743-w40tjrzq"
-          + retry_on_timeout    = (known after apply)
-          + task_key            = "UK-NOTEBOOK"
-
-          + notebook_task {
-              + notebook_path = "/Users/sudhansu.sekhar-pani@takeda.com/UK-TEST-NOTEBOOK"
-            }
-        }
-    }
-
-  # databricks_job.uk_notebook_test_79529 will be created
-  + resource "databricks_job" "uk_notebook_test_79529" {
-      + always_running      = false
-      + format              = (known after apply)
-      + id                  = (known after apply)
-      + max_concurrent_runs = 1
-      + name                = "UK-NOTEBOOK-TEST"
-      + url                 = (known after apply)
-
-      + email_notifications {}
-
-      + task {
-          + existing_cluster_id = "0110-142743-w40tjrzq"
-          + retry_on_timeout    = (known after apply)
-          + task_key            = "UK-NOTEBOOK-TEST"
-
-          + notebook_task {
-              + notebook_path = "/EUCAN/DQC/UK - HDSC - PK testing"
-            }
-        }
-    }
-
-  # databricks_permissions.job_create_comm_crm_vws_27910 will be created
-  + resource "databricks_permissions" "job_create_comm_crm_vws_27910" {
-      + id          = (known after apply)
-      + job_id      = (known after apply)
-      + object_type = (known after apply)
-
-      + access_control {
-          + permission_level = "CAN_MANAGE"
-          + user_name        = "aditya.sonar@takeda.com"
-        }
-      + access_control {
-          + permission_level = "CAN_MANAGE"
-          + user_name        = "vishwanathan.iyer@takeda.com"
-        }
-    }
-
-  # databricks_permissions.job_uk_notebook_79518 will be created
-  + resource "databricks_permissions" "job_uk_notebook_79518" {
-      + id          = (known after apply)
-      + job_id      = (known after apply)
-      + object_type = (known after apply)
-
-      + access_control {
-          + permission_level       = "CAN_MANAGE_RUN"
-          + service_principal_name = "55ecc3f3-dc02-4d69-9da5-d021a171005e"
-        }
-    }
-
-  # databricks_permissions.job_uk_notebook_test_79529 will be created
-  + resource "databricks_permissions" "job_uk_notebook_test_79529" {
-      + id          = (known after apply)
-      + job_id      = (known after apply)
-      + object_type = (known after apply)
-
-      + access_control {
-          + permission_level       = "CAN_MANAGE_RUN"
-          + service_principal_name = "55ecc3f3-dc02-4d69-9da5-d021a171005e"
-        }
-    }
-
-  # module.de-com-eucan-da_interactive_cluster.databricks_cluster.template will be updated in-place
-  ~ resource "databricks_cluster" "template" {
-      ~ custom_tags                  = {
-          - "apms-id"              = "APMS-91706" -> null
-          - "application-name"     = "databricks" -> null
-          - "it-technical-owner"   = "dl.Ted-Platform-Team@Takeda.com" -> null
-          - "ops-exclude-patch"    = "RITM0590559" -> null
-            # (12 unchanged elements hidden)
-        }
-        id                           = "0110-142743-w40tjrzq"
-      ~ spark_conf                   = {
-          - "spark.databricks.delta.autoCompact.enabled"          = "true" -> null
-          - "spark.databricks.delta.optimizeWrite.enabled"        = "true" -> null
-            # (11 unchanged elements hidden)
-        }
-        # (14 unchanged attributes hidden)
-
-        # (2 unchanged blocks hidden)
-    }
-
-  # module.de-com-eucan-da_interactive_cluster.databricks_permissions.template will be updated in-place
-  ~ resource "databricks_permissions" "template" {
-        id          = "/clusters/0110-142743-w40tjrzq"
-        # (2 unchanged attributes hidden)
-
-      - access_control {
-          - permission_level = "CAN_MANAGE" -> null
-          - user_name        = "ipsita.patra@takeda.com" -> null
-        }
-      - access_control {
-          - group_name       = "Okta-DBX-E2-COM-GEMEUCAN-AppAdmin" -> null
-          - permission_level = "CAN_RESTART" -> null
-        }
-      + access_control {
-          + group_name       = "Okta-DBX-E2-COM-GEMEUCAN-AppAdmin"
-          + permission_level = "CAN_RESTART"
-        }
-      - access_control {
-          - group_name       = "Okta-DBX-E2-COM-GEMEUCAN-DataScientist" -> null
-          - permission_level = "CAN_RESTART" -> null
-        }
-      + access_control {
-          + group_name       = "Okta-DBX-E2-COM-GEMEUCAN-DataScientist"
-          + permission_level = "CAN_RESTART"
-        }
-    }
-
-Plan: 6 to add, 2 to change, 0 to destroy.
-
-─────────────────────────────────────────────────────────────────────────────
-
-Saved the plan to: plan.json
-
-To perform exactly these actions, run the following command to apply:
-    terraform apply "plan.json"
+de-com-eucan-da_interactive_cluster = "0110-142743-w40tjrzq"
