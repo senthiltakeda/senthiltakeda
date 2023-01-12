@@ -1,0 +1,85 @@
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.com-gemeucan_interactive_cluster.databricks_cluster.template will be created
+  + resource "databricks_cluster" "template" {
+      + autotermination_minutes      = 120
+      + cluster_id                   = (known after apply)
+      + cluster_name                 = "DS-COM"
+      + custom_tags                  = {
+          + "ResourceClass"        = "Classic"
+          + "Team"                 = "databricks"
+          + "account-type"         = "Production"
+          + "app"                  = "Commercial Data Analytics - GEM and EUCAN"
+          + "application-owner"    = "kranthi-kumar.sreeram@takeda.com"
+          + "business-criticality" = "High"
+          + "business-unit-n1"     = "Comm IT"
+          + "business-unit-n2"     = "Comm IT-EUCAN IT"
+          + "data-classification"  = "high"
+          + "environment-id"       = "Production"
+          + "it-business-owner"    = "dl.It_Databricks_Admins@takeda.com"
+          + "project-id"           = "APMS-92115"
+        }
+      + default_tags                 = (known after apply)
+      + driver_instance_pool_id      = (known after apply)
+      + driver_node_type_id          = "c5d.9xlarge"
+      + enable_elastic_disk          = (known after apply)
+      + enable_local_disk_encryption = (known after apply)
+      + id                           = (known after apply)
+      + node_type_id                 = "c5d.9xlarge"
+      + num_workers                  = 0
+      + policy_id                    = "0F61EF4EEC0005D8"
+      + spark_conf                   = {
+          + "spark.databricks.acl.dfAclsEnabled"                  = "false"
+          + "spark.databricks.hive.metastore.glueCatalog.enabled" = "true"
+          + "spark.databricks.repl.allowedLanguages"              = "python,sql"
+          + "spark.hadoop.aws.glue.cache.db.enable"               = "true"
+          + "spark.hadoop.aws.glue.cache.db.size"                 = "1000"
+          + "spark.hadoop.aws.glue.cache.db.ttl-mins"             = "30"
+          + "spark.hadoop.aws.glue.cache.table.enable"            = "true"
+          + "spark.hadoop.aws.glue.cache.table.size"              = "1000"
+          + "spark.hadoop.aws.glue.cache.table.ttl-mins"          = "30"
+          + "spark.hadoop.fs.s3a.acl.default"                     = "BucketOwnerFullControl"
+          + "spark.hadoop.hive.metastore.glue.catalogid"          = "432372222409"
+        }
+      + spark_version                = "11.3.x-scala2.12"
+      + state                        = (known after apply)
+      + url                          = (known after apply)
+
+      + autoscale {
+          + max_workers = 12
+          + min_workers = 2
+        }
+
+      + aws_attributes {
+          + availability           = "SPOT_WITH_FALLBACK"
+          + first_on_demand        = 2
+          + instance_profile_arn   = "arn:aws:iam::824757673730:instance-profile/TEC-EC2-DATABRICKS-DEPRD-DS-COM-ROLE"
+          + spot_bid_price_percent = 100
+          + zone_id                = "auto"
+        }
+    }
+
+  # module.com-gemeucan_interactive_cluster.databricks_permissions.template will be created
+  + resource "databricks_permissions" "template" {
+      + cluster_id  = (known after apply)
+      + id          = (known after apply)
+      + object_type = (known after apply)
+
+      + access_control {
+          + group_name       = "Okta-DBX-E2-COM-GEMEUCAN-AppAdmin"
+          + permission_level = "CAN_RESTART"
+        }
+      + access_control {
+          + group_name       = "Okta-DBX-E2-COM-GEMEUCAN-DataScientist"
+          + permission_level = "CAN_RESTART"
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + com-gemeucan_interactive_cluster = (known after apply)
